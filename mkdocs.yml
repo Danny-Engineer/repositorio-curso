@@ -1,0 +1,40 @@
+site_name: Logística IA Lab Academy
+site_url: https://Danny-Engineer.github.io/repositorio-curso
+
+site_author: Daniel Melchor Pérez
+
+site_description: |
+  Diplomado Profesional de Inteligencia Artificial
+  Recursos Humanos
+  Gestión de Calidad
+
+theme:
+  name: material
+  language: es
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+docs_dir: docs
+
+nav:
+
+  - Inicio:
+      - Bienvenida: index.md
+
+  - Editorial:
+      - Guía Editorial: 00-editorial/guia-editorial.md
+
+  - Volumen I:
+      - Introducción: 01-fundamentos-ia/index.md
+      - Capítulo 1:
+          01-la-revolucion-de-la-ia.md
