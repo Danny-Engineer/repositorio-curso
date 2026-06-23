@@ -1,1 +1,1 @@
-﻿# REPOSITORIO CURSO
+﻿# Logística IA Lab Academy
