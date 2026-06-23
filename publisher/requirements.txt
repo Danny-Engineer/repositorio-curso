@@ -1,0 +1,5 @@
+streamlit
+jinja2
+gitpython
+python-docx
+mkdocs-material
