@@ -2,11 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import health, system, ai, publisher, pemex_documents
 
-app = FastAPI(
-    title="Logística IA Lab Suite API",
-    version="4.0.0",
-    description="API empresarial para Publisher, IA, RAG y Motor Documental PEMEX."
-)
+app = FastAPI(title="Logística IA Lab Suite API", version="6.0.0")
 
 app.add_middleware(
     CORSMiddleware,

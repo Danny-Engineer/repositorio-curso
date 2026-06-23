@@ -1,0 +1,38 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: logistica_ia_lab_db
+    environment:
+      POSTGRES_USER: lab
+      POSTGRES_PASSWORD: lab
+      POSTGRES_DB: logistica_ia_lab
+    ports:
+      - "5432:5432"
+    volumes:
+      - lab_db_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: logistica_ia_lab_backend
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build: ./frontend
+    container_name: logistica_ia_lab_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+volumes:
+  lab_db_data:

@@ -1,8 +1,7 @@
 from fastapi import APIRouter
 from app.core.config import settings
-
 router = APIRouter()
 
 @router.get("/")
 def health_check():
-    return {"status": "ok", "app": settings.APP_NAME, "version": "4.0.0"}
+    return {"status": "ok", "app": settings.APP_NAME, "version": "6.0.0"}

@@ -1,32 +1,18 @@
-# Logística IA Lab Suite - Enterprise v4
+# Logística IA Lab Suite - Enterprise v6 AI Studio
 
-Versión empresarial con primer módulo funcional de **Motor Documental PEMEX**.
+## Sprint
+AI Studio real configurable.
 
-## Novedades v4
+## Incluye
+- Selector de proveedor IA: local, OpenAI, Claude.
+- Selector de modelo.
+- Endpoint `/api/ai/providers`.
+- Endpoint `/api/ai/generate`.
+- Endpoint `/api/ai/test`.
+- Frontend actualizado.
 
-- Backend FastAPI.
-- Frontend React.
-- IA configurable: local, OpenAI o Claude.
-- Publisher API.
-- AI Studio.
-- PEMEX Suite inicial.
-- Motor Documental PEMEX:
-  - análisis de oficio,
-  - extracción simulada de datos,
-  - generación de borrador de respuesta institucional,
-  - plantilla base de oficio.
-
-## Inicio rápido
-
-1. Copia `.env.example` como `.env`.
-2. Ejecuta:
-
+## Ejecutar
 ```powershell
+docker compose down
 docker compose up --build
 ```
-
-Backend:
-http://localhost:8000/docs
-
-Frontend:
-http://localhost:5173
